@@ -1,14 +1,14 @@
 alter session set nls_date_format = 'DD/MM/YYYY';
 set numformat 99999999999999;
+set linesize 800;
+set pagesize 120;
 
-
-DROP TABLE handler;
-DROP TABLE owner;
+DROP TABLE pet;
 DROP TABLE person;
 
 
 CREATE TABLE person (
-    PID         NUMBER(6),
+    PID         VARCHAR2(6),
     contact     NUMBER(13) NOT NULL,
     firstname   VARCHAR2(15),
     surname     VARCHAR2(15),
@@ -21,18 +21,17 @@ CREATE TABLE person (
     PRIMARY KEY (PID));
 
 
-CREATE TABLE owner (
-    owner_ID    NUMBER,
-    pet_ID      NUMBER,
-    PRIMARY KEY (owner_ID),
-    owner_ID NUMBER FOREIGN KEY REFERENCES person(PID),
-    pet_ID NUMBER FOREIGN KEY REFERENCES pet(pet_ID));
-
-
-CREAT TABLE handler (
-    handler_ID  NUMBER,
-    report_ID
-)
+CREATE TABLE pet(
+    pet_id			VARCHAR2(6) PRIMARY KEY,
+    owner_id 		VARCHAR2(6),
+    NAME			VARCHAR2(10),
+    MICROCHIP		NUMBER(6),
+    TYPE            VARCHAR2(10),
+    WEIGHT   		NUMBER(4,2),
+    GENDER		    CHAR(1),
+    VACCD	    	DATE,
+    BREED		    VARCHAR2(20),
+    FOREIGN KEY (owner_id) REFERENCES PERSON(PID));
 
 
 
@@ -87,3 +86,31 @@ INSERT INTO PERSON VALUES ( 'PID047' ,  '+605833543432'  , 'Ai Lin' , 'Tan' , 95
 INSERT INTO PERSON VALUES ( 'PID048' ,  '+604210291641'  , 'Zainab' , 'Razin' , 67021468056088,'F' , ' 14/02/1967 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
 INSERT INTO PERSON VALUES ( 'PID049' ,  '+601975733457'  , 'Cara' , 'Delevingne' , 63011429609865,'F' , ' 14/01/1963 ', '69 Jln Melati', 'Melaka Town', ' 76300 ');
 INSERT INTO PERSON VALUES ( 'PID050' ,  '+606766146936'  , 'Yen Yen' , 'Tan' , 60110970207584,'F' , ' 09/11/1960 ', '83 Jln Salak', 'Taiping', ' 34000 ');
+
+
+INSERT INTO pet VALUES ( 'PET001' ,  'PID013'  , 'Laika' , '830272' , 'Dog', 35.2, 'F' , '04/10/2018', 'Greyhound');
+INSERT INTO pet VALUES ( 'PET002' ,  'PID010'  , 'Hank' , '190635' , 'Dog', 61.36, 'M' , '16/02/2017', 'Great Dane');
+INSERT INTO pet VALUES ( 'PET003' ,  'PID041'  , 'Maxine' , '060813' , 'Dog', 25, 'F' , '23/10/2017', 'Belgian Malinois');
+INSERT INTO pet VALUES ( 'PET004' ,  'PID020'  , 'Ghost' , '506740' , 'Dog', 3.17, 'M' , NULL, 'Maltese');
+INSERT INTO pet VALUES ( 'PET005' ,  'PID045'  , 'Snowbell' , '305362' , 'Cat', 5.63, 'F' , '19/08/2012', 'White Persian');
+INSERT INTO pet VALUES ( 'PET006' ,  'PID039'  , 'Stuart' , '933557' , 'Dog', 8.94, 'M' , '13/01/2016', 'Poodle');
+INSERT INTO pet VALUES ( 'PET007' ,  'PID022'  , 'Hekitty' , '224356' , 'Cat', 3.33, 'F' , '05/02/2015', 'Japanese Bobtail');
+INSERT INTO pet VALUES ( 'PET008' ,  'PID030'  , 'Sylvester' , '587487' , 'Cat', 2.72, 'M' , '15/03/2013', 'Tuxedo Cat');
+INSERT INTO pet VALUES ( 'PET009' ,  'PID027'  , 'Tigger' , '488970' , 'Dog', 43.18, 'M' , '30/10/2014', 'Bloodhound');
+INSERT INTO pet VALUES ( 'PET010' ,  'PID038'  , 'Tom' , '661622' , 'Cat', 5.5, 'M' , '04/10/2018', 'Domestic Shorthair');
+INSERT INTO pet VALUES ( 'PET011' ,  'PID005'  , 'Jerry' , '916998' , 'Hamster', 0.27, 'M' , '29/12/2017', 'Campbell');
+INSERT INTO pet VALUES ( 'PET012' ,  'PID007'  , 'Nala' , '916208' , 'Cat', 2.43, 'F' , NULL, 'Maine Coon');
+INSERT INTO pet VALUES ( 'PET013' ,  'PID017'  , 'Figaro' , '129556' , 'Hamster', 0.49, 'M' , NULL, 'Roborovski');
+INSERT INTO pet VALUES ( 'PET014' ,  'PID033'  , 'Speedy' , '928617' , 'Rabbit', 4.29, 'M' , NULL, 'Angora');
+INSERT INTO pet VALUES ( 'PET015' ,  'PID019'  , 'Hare' , '777507' , 'Rabbit', 1.78, 'F' , '22/09/2014', 'Holland');
+INSERT INTO pet VALUES ( 'PET016' ,  'PID013'  , 'Camo' , '324287' , 'Reptile', 0.18, 'M' , NULL, 'Chameleon');
+INSERT INTO pet VALUES ( 'PET017' ,  'PID013'  , 'Sho' , '415668' , 'Hamster', .69, 'F' , '19/05/2018', 'Winter White');
+INSERT INTO pet VALUES ( 'PET018' ,  'PID010'  , 'Chips' , '506889' , 'Dog', 23.54, 'M' , '17/07/2018', 'Bulldog');
+INSERT INTO pet VALUES ( 'PET019' ,  'PID041'  , 'Fang' , '237190' , 'Cat', 7.11, 'M' , '01/11/2011', 'Ocicat');
+INSERT INTO pet VALUES ( 'PET020' ,  'PID045'  , 'Whiskers' , '757837' , 'Cat', 3.2, 'F' , NULL, 'Burmese');
+INSERT INTO pet VALUES ( 'PET021' ,  'PID001'  , 'Pusikhat' , '542633' , 'Cat', 4.82, 'F' , '09/12/2010', 'Bengal');
+INSERT INTO pet VALUES ( 'PET022' ,  'PID024'  , 'Echo' , '062561' , 'Parrot', 0.09, 'M' , NULL, 'Cockatiels');
+
+
+select * from person;
+select * from pet;
