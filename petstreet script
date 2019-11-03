@@ -8,15 +8,15 @@ DROP TABLE person;
 
 
 CREATE TABLE person (
-    PID         NUMBER(4),
+    PID         NUMBER(6),
     contact     NUMBER(13) NOT NULL,
-    firstname   VARCHAR2(10),
-    surname     VARCHAR2(11),
+    firstname   VARCHAR2(15),
+    surname     VARCHAR2(15),
     NRIC        NUMBER(14) NOT NULL,
     gender      CHAR(1),
     DOB         DATE,
-    street      VARCHAR2(18),
-    town        VARCHAR2(11),
+    street      VARCHAR2(20),
+    town        VARCHAR2(15),
     postcode    NUMBER(5),
     PRIMARY KEY (PID));
 
@@ -37,53 +37,53 @@ CREAT TABLE handler (
 
 
 
-INSERT INTO PERSON VALUES ( 1001 ,  '+604438661723'  , 'Arif' , 'Ibrahim' , 56654503809306,'M' , '24/10/1982', '5 Jln Universiti', 'Sunway', 47500);
-INSERT INTO PERSON VALUES ( 1002 ,  '+600042877545'  , 'Aminah' , 'Habib' , 08743444673580,'F' , ' 06/07/1999 ', '124 Jln Burma', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1003 ,  '+604516038563'  , 'Man Yi' , 'Low' , 93287075056325,'M' , ' 25/08/1998 ', '205 Jln Burma', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1004 ,  '+601344188765'  , 'Raj' , 'Singh' , 52360923407695,'M' , ' 16/08/1992 ', '4 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1005 ,  '+606786314784'  , 'Syed' , 'Sadik' , 79124251632454,'M' , ' 30/05/1994 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1006 ,  '+603316155356'  , 'Sharifa' , 'Nur' , 18305669751702,'F' , ' 02/07/1998 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1007 ,  '+600562266793'  , 'Chen Yet' , 'Tai' , 32375054341955,'F' , ' 22/09/1966 ', '1 Jln Satu', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1008 ,  '+606551318253'  , 'Kristen' , 'Robbie' , 36603559165298,'F' , ' 11/04/1988 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1009 ,  '+600904864219'  , 'Yu Jien' , 'Ng' , 39538821356477,'M' , ' 15/02/1986 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1010 ,  '+600807541679'  , 'Kwan Kew' , 'Lee' , 57325035182843,'M' , ' 06/03/1982 ', '1 Jln Satu', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1011 ,  '+606355286933'  , 'Tiek Ken' , 'Teoh' , 14245790052074,'M' , ' 31/10/1960 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1012 ,  '+603861749456'  , 'Keith' , 'Ford' , 73358376162313,'M' , ' 04/04/1961 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1013 ,  '+607853922130'  , 'Thulasiram' , 'Naiddu' , 61681598974507,'M' , ' 06/07/1965 ', '12 Jln Burma', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1014 ,  '+607513135088'  , 'Che Hong' , 'Yap' , 31006159765496,'M' , ' 12/07/1960 ', '24 Jln Burma', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1015 ,  '+605909948535'  , 'Darnesh' , 'Subramaniam' , 77512661884535,'M' , ' 07/12/1962 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1016 ,  '+607329222331'  , 'Ravi' , 'Marimuthu' , 70182367341775,'M' , ' 11/11/1983 ', '80 Jln Salak', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1017 ,  '+602314908492'  , 'Lai Fang' , 'Ong' , 33473439379134,'M' , ' 25/01/1986 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1018 ,  '+604599064743'  , 'Justin' , 'Drew' , 60465069847280,'M' , ' 09/06/1967 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1019 ,  '+609328118987'  , 'Bow Chin' , 'Lau' , 70840398244587,'M' , ' 06/03/1966 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1020 ,  '+609858431499'  , 'Thiru' , 'Sinnandavar' , 37358495288112,'M' , ' 20/03/1963 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1021 ,  '+607093334526'  , 'Gopal' , 'Rajendra' , 20245938907650,'M' , ' 05/03/1984 ', '106 Jln Mawar', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1022 ,  '+606403566126'  , 'Mohammad' , 'Jasrie' , 37300170929374,'M' , ' 23/06/1986 ', '83 Jln Salak', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1023 ,  '+603861295845'  , 'Li Leen' , 'Foo' , 35007271821320,'F' , ' 06/02/1975 ', '106 Jln Mawar', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1024 ,  '+605938451868'  , 'Hannah' , 'Stewart' , 36481801091922,'F' , ' 05/12/1980 ', '5 Jln Universiti', 'Sunway', ' 47500 ');
-INSERT INTO PERSON VALUES ( 1025 ,  '+604040944005'  , 'Jessica' , 'Barbara' , 40961371120504,'F' , ' 25/12/1996 ', '9 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1026 ,  '+600729058923'  , 'Kah Jun' , 'Chan' , 27003926751051,'M' , ' 02/12/1996 ', '83 Jln Salak', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1027 ,  '+609783123516'  , 'Brahma' , 'Shankar' , 42416378407968,'M' , ' 08/08/1975 ', '10 Jln Burma', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1028 ,  '+603852454572'  , 'Anaika' , 'Kumar' , 60231355055023,'M' , ' 09/10/1976 ', '106 Jln Mawar', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1029 ,  '+604268113352'  , 'Pushpa' , 'Beneet' , 96503848880966,'F' , ' 06/01/1972 ', '41 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1030 ,  '+604114267399'  , 'Ezira' , 'Salim' , 95306031594669,'F' , ' 01/02/1988 ', '80 Jln Salak', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1031 ,  '+601666800802'  , 'Yue Yang' , 'Lim' , 34066555871771,'M' , ' 16/08/1989 ', '14 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1032 ,  '+606012780143'  , 'Fahima' , 'Mohamed' , 31303372475621,'F' , ' 24/12/1986 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1033 ,  '+602703234664'  , 'Xiu Ying' , 'Wang' , 51854287060339,'F' , ' 14/07/1997 ', '127 Jln Matahari', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1034 ,  '+609596181092'  , 'Priyanka' , 'Chopra' , 06123948984802,'F' , ' 26/03/1959 ', '8 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1035 ,  '+601342885506'  , 'Sara' , 'Khan' , 75929758890681,'F' , ' 09/04/1974 ', '83 Jln Salak', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1036 ,  '+602327335151'  , 'Qian Qian' , 'Lai' , 27833329267706,'F' , ' 12/12/1981 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1037 ,  '+609707982317'  , 'Chin Yee' , 'Lim' , 95824529774919,'M' , ' 16/12/1978 ', '5 Jln Universiti', 'Sunway', ' 47500 ');
-INSERT INTO PERSON VALUES ( 1038 ,  '+603767793891'  , 'Abdul' , 'Abdullah' , 48515916861576,'M' , ' 31/01/1979 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1039 ,  '+602254436157'  , 'Emily' , 'Clarke' , 76479914958286,'F' , ' 23/12/1961 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1040 ,  '+600683517950'  , 'Fung Yee' , 'Low' , 60886203971050,'F' , ' 26/11/1994 ', '69 Jln Melati', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1041 ,  '+606980641370'  , 'Nithya' , 'Shivraj' , 53183566185877,'F' , ' 08/06/1994 ', '6 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1042 ,  '+605240926439'  , 'Yun Kai' , 'Ooi' , 19552396822737,'F' , ' 10/02/1968 ', '80 Jln Salak', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1043 ,  '+602643740463'  , 'Shuba' , 'Ananthan' , 86857599145507,'F' , ' 02/10/1974 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
-INSERT INTO PERSON VALUES ( 1044 ,  '+606077129021'  , 'Shefa' , 'Narayan' , 00640334047339,'F' , ' 15/10/1973 ', '4 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1045 ,  '+609022861618'  , 'Ismail' , 'Yusuf' , 51733569599992,'M' , ' 13/06/1991 ', '69 Jln Melati', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1046 ,  '+602261215765'  , 'Shishastri' , 'Shree' , 72521980902929,'F' , ' 17/10/1964 ', '80 Jln Salak', 'Taiping', ' 34000 ');
-INSERT INTO PERSON VALUES ( 1047 ,  '+605833543432'  , 'Ai Lin' , 'Tan' , 86463745643367,'F' , ' 25/04/1995 ', '114 Jln Cantonment', 'George Town', ' 11500 ');
-INSERT INTO PERSON VALUES ( 1048 ,  '+604210291641'  , 'Zainab' , 'Razin' , 45549068056088,'F' , ' 14/02/1967 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1049 ,  '+601975733457'  , 'Cara' , 'Delevingne' , 81731729609865,'F' , ' 14/01/1963 ', '69 Jln Melati', 'Melaka Town', ' 76300 ');
-INSERT INTO PERSON VALUES ( 1050 ,  '+606766146936'  , 'Yen Yen' , 'Tan' , 54666170207584,'F' , ' 09/11/1960 ', '83 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID001' ,  '+604438661723'  , 'Arif' , 'Ibrahim' , 82102403809306,'M' , '24/10/1982', '5 Jln Universiti', 'Sunway', 47500);
+INSERT INTO PERSON VALUES ( 'PID002' ,  '+600042877545'  , 'Aminah' , 'Habib' , 97070644673580,'F' , ' 06/07/1997 ', '124 Jln Burma', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID003' ,  '+604516038563'  , 'Man Yi' , 'Low' , 98082575056325,'M' , ' 25/08/1998 ', '205 Jln Burma', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID004' ,  '+601344188765'  , 'Raj' , 'Singh' , 92081623407695,'M' , ' 16/08/1992 ', '4 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID005' ,  '+606786314784'  , 'Syed' , 'Sadik' , 94053051632454,'M' , ' 30/05/1994 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID006' ,  '+603316155356'  , 'Sharifa' , 'Nur' , 98070269751702,'F' , ' 02/07/1998 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID007' ,  '+600562266793'  , 'Chen Yet' , 'Tai' , 66092254341955,'F' , ' 22/09/1966 ', '1 Jln Satu', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID008' ,  '+606551318253'  , 'Kristen' , 'Robbie' , 88041159165298,'F' , ' 11/04/1988 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID009' ,  '+600904864219'  , 'Yu Jien' , 'Ng' , 86021521356477,'M' , ' 15/02/1986 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID010' ,  '+600807541679'  , 'Kwan Kew' , 'Lee' , 82030635182843,'M' , ' 06/03/1982 ', '1 Jln Satu', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID011' ,  '+606355286933'  , 'Tiek Ken' , 'Teoh' , 60103190052074,'M' , ' 31/10/1960 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID012' ,  '+603861749456'  , 'Keith' , 'Ford' , 61040476162313,'M' , ' 04/04/1961 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID013' ,  '+607853922130'  , 'Thulasiram' , 'Naiddu' , 65070698974507,'M' , ' 06/07/1965 ', '12 Jln Burma', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID014' ,  '+607513135088'  , 'Che Hong' , 'Yap' , 60071259765496,'M' , ' 12/07/1960 ', '24 Jln Burma', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID015' ,  '+605909948535'  , 'Darnesh' , 'Subramaniam' , 62120761884535,'M' , ' 07/12/1962 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID016' ,  '+607329222331'  , 'Ravi' , 'Marimuthu' , 83111167341775,'M' , ' 11/11/1983 ', '80 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID017' ,  '+602314908492'  , 'Lai Fang' , 'Ong' , 86012539379134,'M' , ' 25/01/1986 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID018' ,  '+604599064743'  , 'Justin' , 'Drew' , 67060969847280,'M' , ' 09/06/1967 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID019' ,  '+609328118987'  , 'Bow Chin' , 'Lau' , 66030698244587,'M' , ' 06/03/1966 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID020' ,  '+609858431499'  , 'Thiru' , 'Sinnandavar' , 63032095288112,'M' , ' 20/03/1963 ', '109 Jln Mawar', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID021' ,  '+607093334526'  , 'Gopal' , 'Rajendra' , 84030538907650,'M' , ' 05/03/1984 ', '106 Jln Mawar', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID022' ,  '+606403566126'  , 'Mohammad' , 'Jasrie' , 86062370929374,'M' , ' 23/06/1986 ', '83 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID023' ,  '+603861295845'  , 'Li Leen' , 'Foo' , 75020671821320,'F' , ' 06/02/1975 ', '106 Jln Mawar', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID024' ,  '+605938451868'  , 'Hannah' , 'Stewart' , 80120501091922,'F' , ' 05/12/1980 ', '5 Jln Universiti', 'Sunway', ' 47500 ');
+INSERT INTO PERSON VALUES ( 'PID025' ,  '+604040944005'  , 'Jessica' , 'Barbara' , 96122571120504,'F' , ' 25/12/1996 ', '9 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID026' ,  '+600729058923'  , 'Kah Jun' , 'Chan' , 96120226751051,'M' , ' 02/12/1996 ', '83 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID027' ,  '+609783123516'  , 'Brahma' , 'Shankar' , 75080878407968,'M' , ' 08/08/1975 ', '10 Jln Burma', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID028' ,  '+603852454572'  , 'Anaika' , 'Kumar' , 76100955055023,'M' , ' 09/10/1976 ', '106 Jln Mawar', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID029' ,  '+604268113352'  , 'Pushpa' , 'Beneet' , 72010348880966,'F' , ' 06/01/1972 ', '41 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID030' ,  '+604114267399'  , 'Ezira' , 'Salim' , 88020131594669,'F' , ' 01/02/1988 ', '80 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID031' ,  '+601666800802'  , 'Yue Yang' , 'Lim' , 89081655871771,'M' , ' 16/08/1989 ', '14 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID032' ,  '+606012780143'  , 'Fahima' , 'Mohamed' , 86122472475621,'F' , ' 24/12/1986 ', '17 Jln Matahari', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID033' ,  '+602703234664'  , 'Xiu Ying' , 'Wang' , 97071487060339,'F' , ' 14/07/1997 ', '127 Jln Matahari', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID034' ,  '+609596181092'  , 'Priyanka' , 'Chopra' , 59032648984802,'F' , ' 26/03/1959 ', '8 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID035' ,  '+601342885506'  , 'Sara' , 'Khan' , 74040958890681,'F' , ' 09/04/1974 ', '83 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID036' ,  '+602327335151'  , 'Qian Qian' , 'Lai' , 81121229267706,'F' , ' 12/12/1981 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID037' ,  '+609707982317'  , 'Chin Yee' , 'Lim' , 78121629774919,'M' , ' 16/12/1978 ', '5 Jln Universiti', 'Sunway', ' 47500 ');
+INSERT INTO PERSON VALUES ( 'PID038' ,  '+603767793891'  , 'Abdul' , 'Abdullah' , 79013116861576,'M' , ' 31/01/1979 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID039' ,  '+602254436157'  , 'Emily' , 'Clarke' , 61122314958286,'F' , ' 23/12/1961 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID040' ,  '+600683517950'  , 'Fung Yee' , 'Low' , 94112603971050,'F' , ' 26/11/1994 ', '69 Jln Melati', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID041' ,  '+606980641370'  , 'Nithya' , 'Shivraj' , 94060866185877,'F' , ' 08/06/1994 ', '6 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID042' ,  '+605240926439'  , 'Yun Kai' , 'Ooi' , 68021096822737,'F' , ' 10/02/1968 ', '80 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID043' ,  '+602643740463'  , 'Shuba' , 'Ananthan' , 74100299145507,'F' , ' 02/10/1974 ', '112 Jln Bulan', 'Ipoh', ' 30000 ');
+INSERT INTO PERSON VALUES ( 'PID044' ,  '+606077129021'  , 'Shefa' , 'Narayan' , 73101534047339,'F' , ' 15/10/1973 ', '4 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID045' ,  '+609022861618'  , 'Ismail' , 'Yusuf' , 91061369599992,'M' , ' 13/06/1991 ', '69 Jln Melati', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID046' ,  '+602261215765'  , 'Shishastri' , 'Shree' , 64101780902929,'F' , ' 17/10/1964 ', '80 Jln Salak', 'Taiping', ' 34000 ');
+INSERT INTO PERSON VALUES ( 'PID047' ,  '+605833543432'  , 'Ai Lin' , 'Tan' , 95042545643367,'F' , ' 25/04/1995 ', '114 Jln Cantonment', 'George Town', ' 11500 ');
+INSERT INTO PERSON VALUES ( 'PID048' ,  '+604210291641'  , 'Zainab' , 'Razin' , 67021468056088,'F' , ' 14/02/1967 ', '67 Jln Melati', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID049' ,  '+601975733457'  , 'Cara' , 'Delevingne' , 63011429609865,'F' , ' 14/01/1963 ', '69 Jln Melati', 'Melaka Town', ' 76300 ');
+INSERT INTO PERSON VALUES ( 'PID050' ,  '+606766146936'  , 'Yen Yen' , 'Tan' , 60110970207584,'F' , ' 09/11/1960 ', '83 Jln Salak', 'Taiping', ' 34000 ');
