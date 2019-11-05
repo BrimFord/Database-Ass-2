@@ -29,7 +29,12 @@ CREATE TABLE person (
     DOB         DATE,
     street      VARCHAR2(20),
     town        VARCHAR2(15),
-    postcode    NUMBER(5));
+    postcode    NUMBER(5)
+    contact
+    firstname
+    NRIC
+    DOB
+    address);
 
 --2
 CREATE TABLE pet(
