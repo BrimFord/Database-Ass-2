@@ -54,7 +54,7 @@ CREATE TABLE pet(
     name			VARCHAR2(15),
     microchip		NUMBER(6),
     type            VARCHAR2(10),
-    weight   		NUMBER(4,2),
+    weight   		VARCHAR2(5),
     sex		        CHAR(1),
     vacc_date	   	DATE,
     breed		    VARCHAR2(20),
@@ -239,7 +239,7 @@ INSERT INTO pet VALUES ( 'PET013' ,  'PID017'  , 'Figaro' , '129556' , 'Hamster'
 INSERT INTO pet VALUES ( 'PET014' ,  'PID033'  , 'Speedy' , '928617' , 'Rabbit', 4.29, 'M' , NULL, 'Angora');
 INSERT INTO pet VALUES ( 'PET015' ,  'PID019'  , 'Hare' , '777507' , 'Rabbit', 1.78, 'F' , '22/09/2014', 'Holland');
 INSERT INTO pet VALUES ( 'PET016' ,  'PID013'  , 'Camo' , NULL , 'Reptile', 0.18, 'M' , NULL, 'Chameleon');
-INSERT INTO pet VALUES ( 'PET017' ,  'PID013'  , 'Sho' , '415668' , 'Hamster', .69, 'F' , '19/05/2018', 'Winter White');
+INSERT INTO pet VALUES ( 'PET017' ,  'PID013'  , 'Sho' , '415668' , 'Hamster', 0.69, 'F' , '19/05/2018', 'Winter White');
 INSERT INTO pet VALUES ( 'PET018' ,  'PID010'  , 'Chips' , '506889' , 'Dog', 23.54, 'M' , '17/07/2018', 'Bulldog');
 INSERT INTO pet VALUES ( 'PET019' ,  'PID041'  , 'Fang' , NULL , 'Cat', 7.11, 'M' , '01/11/2011', 'Ocicat');
 INSERT INTO pet VALUES ( 'PET020' ,  'PID045'  , 'Whiskers' , '757837' , 'Cat', 3.2, 'F' , NULL, 'Burmese');
